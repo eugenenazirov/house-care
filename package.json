@@ -1,0 +1,27 @@
+{
+  "name": "house-care",
+  "version": "1.0.0",
+  "description": "The diploma project for practicing HTML + CSS + JS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "house",
+    "care",
+    "buildings",
+    "build"
+  ],
+  "author": "Eugene Nazirov <jagzonmusic@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.2"
+  }
+}
