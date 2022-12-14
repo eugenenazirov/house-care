@@ -13,3 +13,47 @@
 
 // for gradient max compatibility in bg-gradient style. Do not include it as a mixin.
 // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcc372",endColorstr="#f0dbbc",GradientType=1);
+
+.main {
+  background-image: url("../../public/images/bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.burger__line {
+  @include burger-styles;
+  display: block;
+  position: relative;
+
+  &::before {
+    @include burger-styles;
+    content: '';
+    position: absolute;
+    top: -8px;
+  }
+  &::after {
+    @include burger-styles;
+    content: '';
+    position: absolute;
+    top: 8px;
+  }
+}
+
+.logo {
+  text-align: center;
+
+  .logo__text {
+    font-family: $neumann-font;
+    color: $white-color;
+  }
+}

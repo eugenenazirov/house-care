@@ -26,7 +26,15 @@
   src: url("../../public/fonts/museosanscyrl-700.ttf");
 }
 
-$font-regular: 400;
+$regular-font: 400;
+$neumann-font: 'Neumann', 'Museo Sans Cyrl', sans-serif;
+
+@mixin neumann-heading {
+  font-family: $neumann-font;
+  color: $yellow-color;
+  line-height: 1.2;
+  text-align: center;
+}
 
 $yellow-color: #ecc66b;
 $white-color: #ffffff;
@@ -43,4 +51,10 @@ $header-border: #363d51;
 
 @mixin yellow-gradient {
   @include background-gradient($gradient, $gradient-main-rgb)
+}
+
+@mixin burger-styles {
+  width: 40px;
+  height: 2px;
+  background-color: $white-color;
 }
