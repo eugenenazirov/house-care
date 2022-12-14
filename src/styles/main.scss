@@ -27,8 +27,8 @@ body {
 }
 
 .header {
-  padding: 20px 0;
-  border-bottom: 1px solid;
+  padding: 20px 0 10px;
+  border-bottom: 1px solid $header-border;
 
   .container {
     display: flex;
@@ -81,6 +81,7 @@ body {
     font-family: $neumann-font;
     font-weight: $regular-font;
     color: $white-color;
+    line-height: 1;
   }
 }
 
@@ -90,23 +91,37 @@ body {
     font-weight: 700;
     color: $white-color;
     text-align: right;
+    margin-bottom: 8px;
   }
 
   .phone__order-a-call {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  .order-a-call__icon {
-    .order-a-call__icon-img {
-      margin-right: -10px;
+    .order-a-call__icon {
+      .order-a-call__icon-img {
+        margin: -10px;
+      }
+    }
+
+    .order-a-call__text {
+      font-weight: 700;
+      color: $yellow-color;
+      font-size: 16px;
     }
   }
+}
 
-  .order-a-call__text {
-    font-weight: 700;
-    color: $yellow-color;
-    font-size: 16px;
+.hero {
+  padding: 162px 0 144px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
   }
+}
+
+.scroll-down {
+
 }
