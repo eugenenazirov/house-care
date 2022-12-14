@@ -37,6 +37,12 @@ body {
   }
 }
 
+.btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
 .burger {
   display: block;
   background: transparent;
@@ -53,13 +59,13 @@ body {
       @include burger-styles;
       content: '';
       position: absolute;
-      top: -8px;
+      top: -10px;
     }
     &::after {
       @include burger-styles;
       content: '';
       position: absolute;
-      top: 8px;
+      top: 10px;
     }
   }
 }
@@ -123,5 +129,34 @@ body {
 }
 
 .scroll-down {
+  display: flex;
+  gap: 30px;
+  transform: rotate(-90deg) translateY(-90%);
 
+  .scroll-down__text {
+    color: $scroll-down-color
+  }
+}
+
+.hero__info {
+  max-width: 580px;
+  text-align: center;
+
+  .hero__title {
+    @include neumann-heading;
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  .hero__description {
+    font-family: $museo-font;
+    font-weight: 700;
+    color: $white-color;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+
+  .hero__btn {
+
+  }
 }

@@ -43,6 +43,7 @@ $white-color: #ffffff;
 $gradient: 90deg, rgba(252,195,114,1) 0%, rgba(240,219,188,1) 100%;
 $gradient-main-rgb: rgb(252,195,114);
 $header-border: #363d51;
+$scroll-down-color: #BABABAFF;
 
 @mixin background-gradient($gradient, $main-color) {
   background: rgb($main-color);
