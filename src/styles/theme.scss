@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Neumann';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../public/fonts/td-neumann.otf");
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../public/fonts/museosanscyrl-300.ttf");
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../public/fonts/museosanscyrl-500.ttf");
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../public/fonts/museosanscyrl-700.ttf");
+}
+
+$font-regular: 400;
+
+$yellow-color: #ecc66b;
+$white-color: #ffffff;
+$gradient: 90deg, rgba(252,195,114,1) 0%, rgba(240,219,188,1) 100%;
+$gradient-main-rgb: rgb(252,195,114);
+
+@mixin background-gradient($gradient, $main-color) {
+  background: rgb($main-color);
+  background: -moz-linear-gradient($gradient);
+  background: -webkit-linear-gradient($gradient);
+  background: linear-gradient($gradient);
+}
+
+@mixin yellow-gradient {
+  @include background-gradient($gradient, $gradient-main-rgb)
+}

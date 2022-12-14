@@ -1,6 +1,15 @@
+@import "theme";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// for gradient max compatibility in bg-gradient style. Do not include it as a mixin.
+// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcc372",endColorstr="#f0dbbc",GradientType=1);
