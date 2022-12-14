@@ -61,6 +61,7 @@ body {
       position: absolute;
       top: -10px;
     }
+
     &::after {
       @include burger-styles;
       content: '';
@@ -131,7 +132,7 @@ body {
 .scroll-down {
   display: flex;
   gap: 30px;
-  transform: rotate(-90deg) translateY(-90%);
+  transform: rotate(-90deg) translateY(42px);
 
   .scroll-down__text {
     color: $scroll-down-color
@@ -157,6 +158,13 @@ body {
   }
 
   .hero__btn {
-
+    @include yellow-gradient;
+    font-family: $museo-font;
+    font-size: $std-font-size;
+    color: $btn-text;
+    padding: 21px;
+    width: 300px;
+    border-radius: 40px;
   }
 }
+
