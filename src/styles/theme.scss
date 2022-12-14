@@ -27,7 +27,9 @@
 }
 
 $regular-font: 400;
+$std-font-size: 18px;
 $neumann-font: 'Neumann', 'Museo Sans Cyrl', sans-serif;
+$museo-font: 'Museo Sans Cyrl', sans-serif;
 
 @mixin neumann-heading {
   font-family: $neumann-font;
@@ -54,7 +56,12 @@ $header-border: #363d51;
 }
 
 @mixin burger-styles {
+  display: block;
   width: 40px;
   height: 2px;
   background-color: $white-color;
+}
+
+a {
+  text-decoration: none;
 }
