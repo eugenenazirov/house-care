@@ -269,25 +269,33 @@ body {
 }
 
 .tech {
-  padding: 60px 0;
+  padding: 60px 0 175px;
 
   .tech__title {
     margin-bottom: 83px;
   }
 }
 
-.house-schema__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.house-schema {
+  position: relative;
+
+  .house-schema__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .schema__info-block {
+  max-width: 240px;
+  position: absolute;
+
   .info-block__title {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.278;
     text-align: left;
+    margin-bottom: 16px;
   }
 
   .info-block__description {
@@ -295,4 +303,63 @@ body {
     font-size: 16px;
     line-height: 1.313;
   }
+
+  .info-block__cursor {
+    position: absolute;
+  }
+}
+
+#infoBlock1 {
+  max-width: 280px;
+  top: 90px;
+  left: 10px;
+
+  .info-block__cursor {
+    top: -15px;
+    right: -175px;
+  }
+}
+
+#infoBlock2 {
+  top: 340px;
+  left: 70px;
+
+  .info-block__cursor {
+    top: -45px;
+    right: -120px;
+  }
+}
+
+#infoBlock3 {
+  bottom: -120px;
+  right: 310px;
+
+  .info-block__cursor {
+    top: -40px;
+    left: -145px;
+  }
+}
+
+#infoBlock4 {
+  bottom: 75px;
+  right: 25px;
+
+  .info-block__cursor {
+    top: -55px;
+    left: -270px;
+  }
+}
+
+#infoBlock5 {
+  top: 120px;
+  right: 0;
+
+  .info-block__cursor {
+    top: -7px;
+    left: -200px;
+  }
+}
+
+.steps {
+  padding: 60px 0;
 }
