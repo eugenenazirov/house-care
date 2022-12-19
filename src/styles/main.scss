@@ -10,6 +10,8 @@ body {
   font-family: $museo-font;
   font-size: $std-font-size;
   font-weight: 300;
+  background-color: $bg-blue;
+  color: $white-color;
 }
 
 .container {
@@ -21,7 +23,7 @@ body {
 // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcc372",endColorstr="#f0dbbc",GradientType=1);
 
 .main {
-  background-image: url("../../public/images/bg.png");
+  background-image: url("../../public/images/bg.jpeg");
   background-position: center;
   background-size: cover;
 }
@@ -36,12 +38,6 @@ body {
     //justify-content: space-between;
     align-items: center;
   }
-}
-
-.btn {
-  cursor: pointer;
-  border: none;
-  background: none;
 }
 
 .burger {
@@ -135,6 +131,7 @@ body {
   display: flex;
   gap: 30px;
   transform: rotate(-90deg) translateX(-150px) translateY(45px);
+  cursor: pointer;
 
   .scroll-down__text {
     color: $scroll-down-color
@@ -147,7 +144,6 @@ body {
   text-align: center;
 
   .hero__title {
-    @include neumann-heading;
     font-size: 50px;
     margin-bottom: 30px;
   }
@@ -161,13 +157,8 @@ body {
   }
 
   .hero__btn {
-    @include yellow-gradient;
-    font-family: $museo-font;
-    font-size: $std-font-size;
     color: $btn-text;
-    padding: 21px;
     width: 300px;
-    border-radius: 40px;
   }
 }
 
@@ -176,4 +167,132 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.projects {
+  padding: 113px 0 60px;
+
+  .projects__title {
+    margin-bottom: 10px;
+  }
+}
+
+.projects__project {
+  display: grid;
+  grid-template-columns: 588px 1fr;
+  grid-column-gap: 125px;
+  padding: 60px 0;
+
+  .project__image {
+    display: grid;
+    grid-template-columns:
+    [picture1] 1fr
+    [picture2] 1fr
+    [picture3] 1fr
+    [picture-end];
+    grid-template-rows:
+    [primary-picture] 370px
+    [secondary-picture] 1fr;
+    grid-gap: 25px;
+
+    .project__image-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &:first-child {
+        grid-column: picture1 / picture-end;
+        //height: 100%;
+      }
+    }
+  }
+
+
+  .project__info {
+    max-width: 486px;
+
+    .project__title {
+      font-size: 30px;
+      font-weight: 500;
+      color: $white-color;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .project__description {
+      line-height: 1.278;
+      margin-bottom: 50px;
+    }
+
+    .project__circles {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      .circles__circle {
+        display: flex;
+        border: 1px solid $yellow-color;
+        border-radius: 50%;
+        width: 110px;
+        height: 110px;
+        justify-content: center;
+        align-items: center;
+
+        .circle__text {
+          font-size: 20px;
+          color: $yellow-color;
+          line-height: 1.25;
+          max-width: 80px;
+          text-align: center;
+        }
+      }
+    }
+
+    .project__buttons {
+      max-width: 365px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .project__btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.see-more {
+  font-weight: 500;
+  text-align: center;
+  color: $see-more-color;
+  cursor: pointer;
+}
+
+.tech {
+  padding: 60px 0;
+
+  .tech__title {
+    margin-bottom: 83px;
+  }
+}
+
+.house-schema__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.schema__info-block {
+  .info-block__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.278;
+    text-align: left;
+  }
+
+  .info-block__description {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 1.313;
+  }
 }

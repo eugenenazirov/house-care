@@ -34,17 +34,17 @@
     </header>
     <section class="hero">
         <div class="container">
-            <a href="#" class="scroll-down">
+            <div class="scroll-down" id="scrollDown">
                 <div class="scroll-down__arrow">
                     <img src="public/images/down-arrow.png" alt="Стрелка вниз" class="scroll-down__arrow-img">
                 </div>
                 <span class="scroll-down__text">Листайте вниз</span>
-            </a>
+            </div>
             <div class="hero__info">
                 <h1 class="title hero__title">Строительство домов
                     и коттеджей под ключ</h1>
                 <p class="hero__description">Сможете переехать в готовый дом уже через 3 месяца</p>
-                <button class="btn hero__btn">Узнать подробнее</button>
+                <button class="btn hero__btn btn-gradient">Узнать подробнее</button>
             </div>
             <div class="social">
                 <a href="#" class="social__icon">
@@ -61,15 +61,15 @@
     </section>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
     <div class="container">
         <h2 class="title section-title projects__title">Наши проекты</h2>
         <div class="projects__project">
             <div class="project__image">
-                <img src="" alt="" class="project__image-img">
-                <img src="" alt="" class="project__image-img">
-                <img src="" alt="" class="project__image-img">
-                <img src="" alt="" class="project__image-img">
+                <img src="public/images/projects/1.png" alt="Проект дома" class="project__image-img">
+                <img src="public/images/projects/2.png" alt="Проект дома" class="project__image-img">
+                <img src="public/images/projects/3.png" alt="Проект дома" class="project__image-img">
+                <img src="public/images/projects/4.png" alt="Проект дома" class="project__image-img">
             </div>
             <div class="project__info">
                 <h3 class="project__title">Modern house 003</h3>
@@ -79,7 +79,11 @@
                 <div class="project__circles">
                     <div class="circles__circle">
                         <div class="circle__text">134 м2</div>
+                    </div>
+                    <div class="circles__circle">
                         <div class="circle__text">4 спальни</div>
+                    </div>
+                    <div class="circles__circle">
                         <div class="circle__text">2 санузла</div>
                     </div>
                 </div>
@@ -91,10 +95,10 @@
         </div>
         <div class="projects__project">
             <div class="project__image">
-                <img src="" alt="" class="project__image-img">
-                <img src="" alt="" class="project__image-img">
-                <img src="" alt="" class="project__image-img">
-                <img src="" alt="" class="project__image-img">
+                <img src="public/images/projects/5.png" alt="Проект дома" class="project__image-img">
+                <img src="public/images/projects/2.png" alt="Проект дома" class="project__image-img">
+                <img src="public/images/projects/3.png" alt="Проект дома" class="project__image-img">
+                <img src="public/images/projects/4.png" alt="Проект дома" class="project__image-img">
             </div>
             <div class="project__info">
                 <h3 class="project__title">Modern house 004</h3>
@@ -104,7 +108,11 @@
                 <div class="project__circles">
                     <div class="circles__circle">
                         <div class="circle__text">145 м2</div>
+                    </div>
+                    <div class="circles__circle">
                         <div class="circle__text">3 спальни</div>
+                    </div>
+                    <div class="circles__circle">
                         <div class="circle__text">2 санузла</div>
                     </div>
                 </div>
@@ -126,36 +134,36 @@
         <h2 class="title section-title tech__title">Технологии строительства</h2>
         <div class="house-schema">
             <div class="house-schema__image">
-                <img src="" alt="" class="house-schema__image-img">
+                <img src="public/images/tech.png" alt="Дом в разрезе" class="house-schema__image-img">
             </div>
             <div class="schema__info-block">
                 <h5 class="info-block__title">Неразрывный каркас</h5>
                 <p class="info-block__description">Монтаж стен этажей внутри дома и по всему периметру выполняется
                     единым массивом</p>
-                <img src="" alt="" class="info-block__cursor">
+                <img src="public/images/tech-cursor1.png" alt="Указатель" class="info-block__cursor">
             </div>
             <div class="schema__info-block">
                 <h5 class="info-block__title">Диагональный раскос</h5>
                 <p class="info-block__description">Система диагональных раскосов позволяет создать оптимальный
                     вентиляционный зазор для капитальных стен и наружной отделки</p>
-                <img src="" alt="" class="info-block__cursor">
+                <img src="public/images/tech-cursor2.png" alt="Указатель" class="info-block__cursor">
             </div>
             <div class="schema__info-block">
                 <h5 class="info-block__title">Сборка силовых узлов</h5>
                 <p class="info-block__description">Основные силовые узлы наших домов оцинкованы, что позволяет быть
                     уверенными в исключительной прочности и долговечности конструкции</p>
-                <img src="" alt="" class="info-block__cursor">
+                <img src="public/images/tech-cursor3.png" alt="Указатель" class="info-block__cursor">
             </div>
             <div class="schema__info-block">
                 <h5 class="info-block__title">Плитная ветрозащита</h5>
                 <p class="info-block__description">Используемая влагостойкая ветрозащитная плита обеспечивает
                     дополнительную шумоизоляцию стен</p>
-                <img src="" alt="" class="info-block__cursor">
+                <img src="public/images/tech-cursor4.png" alt="Указатель" class="info-block__cursor">
             </div>
             <div class="schema__info-block">
                 <h5 class="info-block__title">5 камерные окна</h5>
                 <p class="info-block__description">Обеспечивают исключительную сохранность тепла в доме</p>
-                <img src="" alt="" class="info-block__cursor">
+                <img src="public/images/tech-cursor5.png" alt="Указатель" class="info-block__cursor">
             </div>
         </div>
     </div>
