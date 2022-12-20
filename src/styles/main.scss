@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: $museo-font;
-  font-size: $std-font-size;
-  font-weight: 300;
-  background-color: $bg-blue;
-  color: $white-color;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -293,9 +285,8 @@ body {
   .info-block__title {
     font-size: 18px;
     font-weight: 500;
-    line-height: 1.278;
     text-align: left;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .info-block__description {
@@ -362,4 +353,54 @@ body {
 
 .steps {
   padding: 60px 0;
+}
+
+.steps__title {
+  margin-bottom: 70px;
+}
+
+.steps__cards {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  grid-template-rows: repeat(2, 150px);
+  grid-column-gap: 120px;
+  grid-row-gap: 100px;
+
+  .step__card {
+    max-width: 308px;
+    display: flex;
+
+    .card__image {
+      position: relative;
+
+      .card__icon {
+        object-fit: none;
+        position: absolute;
+        bottom: 44px;
+        left: 10px;
+      }
+    }
+
+    .card__info {
+      padding-top: 50px;
+
+      .card__title {
+        font-size: $std-font-size;
+        margin-bottom: 10px;
+      }
+    }
+
+    &:nth-child(2), &:nth-child(5) {
+      max-width: 360px;
+    }
+  }
+}
+
+.card__number {
+  font-family: $neumann-font;
+  font-size: 70px;
+  color: $steps-number-color;
+  font-weight: 400;
+  line-height: 1;
 }

@@ -1,37 +1,4 @@
-@font-face {
-  font-family: 'Neumann';
-  font-weight: 400;
-  font-style: normal;
-  src: url("../../public/fonts/td-neumann.otf");
-}
-
-@font-face {
-  font-family: 'Museo Sans Cyrl', sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  src: url("../../public/fonts/museosanscyrl-100.ttf");
-}
-
-@font-face {
-  font-family: 'Museo Sans Cyrl', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  src: url("../../public/fonts/museosanscyrl-300.ttf");
-}
-
-@font-face {
-  font-family: 'Museo Sans Cyrl', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  src: url("../../public/fonts/museosanscyrl-500.ttf");
-}
-
-@font-face {
-  font-family: 'Museo Sans Cyrl', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  src: url("../../public/fonts/museosanscyrl-700.ttf");
-}
+@import "fonts";
 
 $regular-font: 400;
 $std-font-size: 18px;
@@ -54,6 +21,7 @@ $scroll-down-color: #BABABAFF;
 $see-more-color: rgb(137, 137, 138);
 $btn-text: rgb(37, 37, 45);
 $bg-blue: #25252d;
+$steps-number-color: #393943;
 
 @mixin background-gradient($gradient, $main-color) {
   background: $main-color;
@@ -71,6 +39,14 @@ $bg-blue: #25252d;
   width: 40px;
   height: 2px;
   background-color: $white-color;
+}
+
+body {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-size: $std-font-size;
+  font-weight: 300;
+  background-color: $bg-blue;
+  color: $white-color;
 }
 
 a {

@@ -31,5 +31,5 @@ exports.sass = sassToCss;
 exports.js = minifyJS;
 
 exports.watch = function () {
-    gulp.watch(['./src/styles/*.scss', './src/scripts/*.js'], gulp.parallel('sass', 'js'));
+    gulp.watch(['./src/styles/*.scss', './src/scripts/*.js', "./fonts/*.scss"], gulp.parallel('sass', 'js'));
 };
