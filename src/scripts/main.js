@@ -16,6 +16,10 @@ const scrollToProjects = () => {
 function main() {
     orderProjectBlocks();
     $('#scrollDown').click(scrollToProjects);
+    new Glide('.glide', {
+        autoplay: 3000,
+        hoverpause: true,
+    }).mount();
 }
 
 $(document).ready(main);
