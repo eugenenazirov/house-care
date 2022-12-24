@@ -6,6 +6,12 @@ const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
 const minify = require('gulp-minify');
 
+// import gulp from 'gulp';
+// import cssmin from 'gulp-cssmin';
+// import sass from 'gulp-sass';
+// import rename from 'gulp-rename';
+// import minify from 'gulp-minify';
+
 
 function sassToCss() {
     return gulp.src('./src/styles/main.scss')
