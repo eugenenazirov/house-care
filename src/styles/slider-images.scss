@@ -1,0 +1,55 @@
+@mixin background-props {
+  background-size: cover;
+  background-position: center;
+}
+
+#slide1 {
+  .item__image-left {
+    background-image: url("../../public/images/slider/1.png");
+    @include background-props;
+  }
+
+  .item__image-center {
+    background-image: url("../../public/images/slider/2.png");
+    @include background-props;
+  }
+
+  .item__image-right {
+    background-image: url("../../public/images/slider/3.png");
+    @include background-props;
+  }
+}
+
+#slide2 {
+  .item__image-left {
+    background-image: url("../../public/images/slider/6.jpg");
+    @include background-props;
+  }
+
+  .item__image-center {
+    background-image: url("../../public/images/slider/7.jpg");
+    @include background-props;
+  }
+
+  .item__image-right {
+    background-image: url("../../public/images/slider/11.jpg");
+    @include background-props;
+  }
+}
+
+#slide3 {
+  .item__image-left {
+    background-image: url("../../public/images/slider/8.jpg");
+    @include background-props;
+  }
+
+  .item__image-center {
+    background-image: url("../../public/images/slider/10.jpg");
+    @include background-props;
+  }
+
+  .item__image-right {
+    background-image: url("../../public/images/slider/9.jpg");
+    @include background-props;
+  }
+}
