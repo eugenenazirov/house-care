@@ -505,3 +505,30 @@
 }
 
 @import "slider-images";
+
+.guarantees__benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+
+  .guarantees__benefit {
+    max-width: 290px;
+    text-align: center;
+
+    .benefit__circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 0 auto;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 1px solid $yellow-color;
+    }
+
+    .benefit__image {
+      margin-bottom: 29px;
+    }
+  }
+}
