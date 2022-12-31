@@ -78,6 +78,7 @@ a {
 
 .btn-gradient {
   @include yellow-gradient;
+  color: $bg-blue;
 }
 
 .btn-transparent {

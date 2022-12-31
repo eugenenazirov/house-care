@@ -149,7 +149,6 @@
   }
 
   .hero__btn {
-    color: $btn-text;
     width: 300px;
   }
 }
@@ -514,10 +513,44 @@
 
 @import "slider-images";
 
+.guarantees {
+  padding: 60px 0;
+
+  .container {
+    text-align: center;
+  }
+}
+
+.guarantees__title {
+  margin-bottom: 70px;
+}
+
+.guarantees__cards {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  .guarantees__card {
+    text-align: left;
+    max-width: 588px;
+    padding: 30px 40px;
+    background-color: $card-color;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .card__title {
+      margin-bottom: 15px;
+    }
+  }
+}
+
 .guarantees__benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  justify-items: center;
+  margin-bottom: 60px;
 
   .guarantees__benefit {
     max-width: 290px;
@@ -537,30 +570,6 @@
 
     .benefit__image {
       margin-bottom: 29px;
-    }
-  }
-}
-
-.guarantees__title {
-  margin-bottom: 70px;
-}
-
-.guarantees__cards {
-  margin-bottom: 60px;
-  display: flex;
-  justify-content: space-between;
-
-  .guarantees__card {
-    max-width: 588px;
-    padding: 30px 40px;
-    background-color: $card-color;
-
-    display: flex;
-    align-items: center;
-    gap: 40px;
-
-    .card__title {
-      margin-bottom: 15px;
     }
   }
 }
