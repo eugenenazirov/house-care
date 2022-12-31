@@ -385,17 +385,24 @@
 
     .card__info {
       padding-top: 50px;
-
-      .card__title {
-        font-size: $std-font-size;
-        margin-bottom: 10px;
-      }
     }
 
     &:nth-child(2), &:nth-child(5) {
       max-width: 360px;
     }
   }
+}
+
+.card__title {
+  font-weight: 500;
+  font-size: $std-font-size;
+  margin-bottom: 10px;
+}
+
+.card__description {
+  font-size: $std-font-size;
+  font-weight: 100;
+  line-height: 1.278;
 }
 
 .card__number {
@@ -445,7 +452,7 @@
           display: grid;
           grid-template-columns: 235px 1px 235px;
           justify-content: space-between;
-          background-color: $slider-card-color;
+          background-color: $card-color;
 
           .text-left {
             .item__title {
@@ -466,6 +473,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+            font-weight: 300;
           }
 
           .split-line {
@@ -529,6 +537,30 @@
 
     .benefit__image {
       margin-bottom: 29px;
+    }
+  }
+}
+
+.guarantees__title {
+  margin-bottom: 70px;
+}
+
+.guarantees__cards {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  .guarantees__card {
+    max-width: 588px;
+    padding: 30px 40px;
+    background-color: $card-color;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .card__title {
+      margin-bottom: 15px;
     }
   }
 }
