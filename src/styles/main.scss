@@ -573,3 +573,69 @@
     }
   }
 }
+
+.consultation {
+  padding: 60px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+  }
+
+  .consultation__form {
+    .consultation__title {
+      margin-bottom: 40px;
+    }
+
+    .consultation__form-form {
+      display: block;
+      margin: 0 auto;
+      max-width: 415px;
+
+      .form__agreement {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.form__label {
+  display: none;
+}
+
+.checkbox-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.form__input {
+  margin-bottom: 20px;
+
+  display: block;
+  width: 100%;
+
+  font-size: 18px;
+  font-family: $museo-font;
+  font-weight: 300;
+  color: $white-color;
+
+  background: none;
+  border: 1px solid $white-color;
+  border-radius: 40px;
+  padding: 21px;
+
+  &::placeholder {
+    color: $white-color;
+  }
+}
+
+.form__btn {
+  margin-bottom: 30px;
+
+  display: block;
+  width: 100%;
+}
