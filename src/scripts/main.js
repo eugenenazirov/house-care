@@ -13,9 +13,23 @@ const scrollToProjects = () => {
     });
 }
 
+const popup = $('.popup');
+
+const openPopup = () => {
+    popup.removeClass('closed').hide().fadeIn();
+}
+
+const hidePopup = () => {
+    popup.fadeOut(400, () => {
+        popup.addClass('closed');
+    });
+}
+
 function main() {
     orderProjectBlocks();
+    $('#tourBtn').click(openPopup);
     $('#scrollDown').click(scrollToProjects);
+    $('#closeBtn').click(hidePopup);
     new Glide('.glide', {
         autoplay: 3000,
         hoverpause: true,

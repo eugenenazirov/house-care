@@ -445,7 +445,7 @@
         <div class="map__content">
             <h2 class="title section-title map__title">Запишитесь на экскурсию</h2>
             <p class="map__description">В готовые дома, чтобы лично убедиться в качестве нашей работы</p>
-            <button class="btn btn-gradient map__btn">Записаться</button>
+            <button id="tourBtn" class="btn btn-gradient map__btn">Записаться</button>
         </div>
     </div>
 </section>
@@ -489,6 +489,31 @@
         </div>
     </div>
 </footer>
+
+<div class="popup register-on-a-tour closed">
+    <div class="popup__content">
+        <button id="closeBtn" type="button" class="close-btn">
+            <img class="close-btn-img" src="public/images/cancel.png" alt="Иконка закрыть">
+        </button>
+        <p class="popup__description">
+            Пожалуйста, оставьте свои данные, чтобы мы могли связаться с вами и уточнить детали предстоящей экскурсии
+        </p>
+        <form action="" class="form consultation__form-form popup__form">
+            <label class="form__label" for="nameInputTour">Ваше имя</label>
+            <input type="text" class="form__input" id="nameInputTour" placeholder="Ваше имя">
+            <label class="form__label" for="phoneInputTour">Ваш телефон</label>
+            <input type="text" class="form__input" id="phoneInputTour" placeholder="Ваш телефон">
+            <button type="button" class="btn form__btn btn-gradient">Записаться</button>
+            <div class="form__agreement">
+                <input type="checkbox" class="checkbox form__checkbox" id="formCheckboxTour" required>
+                <label class="checkbox-label" for="formCheckbox">Нажимая на кнопку,
+                    я даю согласие на обработку персональных данных и соглашаюсь с
+                    <span class="underline">политикой конфиденциальности</span>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
