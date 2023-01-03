@@ -1,0 +1,68 @@
+.location-mark {
+  position: absolute;
+
+  opacity: 0.7;
+  transform: scale(1);
+  transition: .3s ease-out;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+#point1 {
+  top: 208px;
+  left: 230px;
+}
+
+#point2 {
+  top: 357px;
+  left: 200px;
+}
+
+#point3 {
+  top: 290px;
+  left: 300px;
+}
+
+#point4 {
+  top: 370px;
+  left: 321px;
+}
+
+#point5 {
+  top: 330px;
+  left: 356px;
+}
+
+#point6 {
+  top: 430px;
+  left: 400px;
+}
+
+#point7 {
+  top: 325px;
+  right: 428px;
+}
+
+#point8 {
+  top: 473px;
+  right: 380px;
+}
+
+#point9 {
+  top: 513px;
+  right: 338px;
+}
+
+#point10 {
+  top: 408px;
+  right: 335px;
+}
+
+#point11 {
+  top: 200px;
+  right: 315px;
+}
+

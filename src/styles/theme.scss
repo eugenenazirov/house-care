@@ -51,6 +51,7 @@ body {
   font-weight: 300;
   background-color: $bg-blue;
   color: $white-color;
+  margin: 0;
 }
 
 a {
@@ -88,4 +89,44 @@ a {
 
 .underline {
   text-decoration: underline;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: $bg-blue;
+  /* Not removed via appearance */
+  margin: 5px 0 0;
+  cursor: pointer;
+
+  flex-shrink: 0;
+  font: inherit;
+  color: $white-color;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $white-color;
+
+  display: grid;
+  place-content: center;
+
+  &::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em $white-color;
+
+    /* Windows High Contrast Mode */
+    background-color: $white-color;
+
+    transform-origin: bottom left;
+    clip-path: polygon(0 68%, 32% 100%, 100% 17%, 94% 11%, 32% 87%, 6% 62%);
+  }
+
+  &:checked::before {
+    transform: scale(1.5);
+  }
 }

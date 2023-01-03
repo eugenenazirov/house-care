@@ -504,6 +504,7 @@
     .glide__bullet {
       background: none;
       border: 1px solid $yellow-color;
+
       &--active {
         background: $yellow-color;
       }
@@ -639,3 +640,37 @@
   display: block;
   width: 100%;
 }
+
+.map {
+  padding: 280px 0 160px;
+  background-image: url("../public/images/tour/map.png");
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  background-position: center;
+  background-color: $bg-blue;
+  background-blend-mode: multiply;
+
+  position: relative;
+
+  .map__content {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+
+    .map__title {
+      font-size: 60px;
+      max-width: 384px;
+      margin: 0 auto 30px;
+    }
+
+    .map__description {
+      margin-bottom: 40px;
+    }
+
+    .map__btn {
+      width: 306px;
+    }
+  }
+}
+
+@import "location-marks";
