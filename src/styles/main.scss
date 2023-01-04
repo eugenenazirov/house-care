@@ -186,14 +186,18 @@
     [secondary-picture] 1fr;
     grid-gap: 25px;
 
-    .project__image-img {
+    .project__image-a {
       width: 100%;
       height: 100%;
-      object-fit: cover;
 
       &:first-child {
         grid-column: picture1 / picture-end;
-        //height: 100%;
+      }
+
+      .project__image-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
