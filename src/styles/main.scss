@@ -170,12 +170,13 @@
 }
 
 .projects__project {
-  display: grid;
-  grid-template-columns: 588px 1fr;
-  grid-column-gap: 125px;
+  display: flex;
+  flex-flow: wrap;
+  gap: 125px;
   padding: 60px 0;
 
   .project__image {
+    max-width: 588px;
     display: grid;
     grid-template-columns:
     [picture1] 1fr
@@ -236,6 +237,7 @@
 
         .circle__text {
           font-size: 20px;
+          font-weight: 500;
           color: $yellow-color;
           line-height: 1.25;
           max-width: 80px;
@@ -741,3 +743,5 @@
 .closed {
   display: none;
 }
+
+@import "adaptive";

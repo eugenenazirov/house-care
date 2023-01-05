@@ -4,6 +4,7 @@ const seeMore = $('.see-more')
 const seeMoreText = $('.see-more__text')
 const seeMoreArrow = $('.see-more__arrow');
 const popupMenu = $('#popupMenu');
+const projectInfoContent = $('.project__info').children();
 
 
 const orderProjectBlocks = () => {
@@ -137,7 +138,22 @@ const validateForm = (e) => {
     sendPostRequest(formData);
 }
 
+const adaptiveCheck = (maxWidth) => {
+    if ($(window).width() <= maxWidth) {
+        projects.each(function () {
+            let elem = $(this);
+            let projectImagesContent = elem.children().first();
+            let projectInfoContent = elem.children().last();
+
+            projectInfoContent.html(projectInfoContent.html() + projectImagesContent.prop('outerHTML'));
+            projectImagesContent.remove();
+        })
+    }
+}
+
 function main() {
+    adaptiveCheck(320);
+
     projects.slice(-3).hide();
     orderProjectBlocks();
     $('#tourBtn').click(showPopup);
@@ -155,17 +171,19 @@ function main() {
         hoverpause: true,
     }).mount();
 
-    $('.project__image').magnificPopup({
-        delegate: 'a',
-        gallery: {
-            enabled: true
-        },
-        type: 'image'
-    });
-
     $('.form__input.phone').each(function () {
         new IMask(this, {
             mask: "+{7} (000) 000-00-00"
+        });
+    });
+
+    $('.project__image').each(function () {
+        $(this).magnificPopup({
+            delegate: 'a',
+            gallery: {
+                enabled: true
+            },
+            type: 'image'
         });
     });
 }
