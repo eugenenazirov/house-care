@@ -3,7 +3,6 @@ const projects = $('.projects__project');
 const seeMore = $('.see-more')
 const seeMoreText = $('.see-more__text')
 const seeMoreArrow = $('.see-more__arrow');
-const form = $('#form');
 
 
 const orderProjectBlocks = () => {
@@ -56,12 +55,41 @@ const hidePopup = () => {
     });
 }
 
+const sendPostRequest = (formData) => {
+    $.ajax({
+        method: "POST",
+        url: "https://testologia.site/checkout",
+        data: formData
+    })
+        .done(function( msg ) {
+            if (msg.success === 0) {
+                alert('Произошла ошибка! Попробуйте снова')
+                return false;
+            }
+
+            $('.consultation__form').hide(500, () => {
+                $('.thanks').removeClass('closed').hide().fadeIn(500);
+            });
+        });
+}
+
+const clearForm = (inputs, checkbox) => {
+    inputs.each(function () {
+        let elem = $(this);
+        elem.removeClass('invalid-input');
+        elem.next().addClass('closed');
+    })
+    checkbox.removeClass('invalid-input');
+}
+
 const validateForm = (e) => {
     e.preventDefault();
     const formClass = e.target.parentElement.classList[0];
     const inputs = $(`.${formClass} .form__input`);
     const checkbox = $(`.${formClass} .form__checkbox`);
     let errors = [];
+
+    clearForm(inputs, checkbox);
 
     inputs.each(function () {
         let trimmedValue = this.value.trim();
@@ -74,6 +102,7 @@ const validateForm = (e) => {
     });
 
     if (!checkbox[0].checked) {
+        checkbox.addClass('invalid-input');
         errors.push(`Checkbox ${checkbox[0].name} isn't checked!`)
     }
 
@@ -84,8 +113,12 @@ const validateForm = (e) => {
         return false;
     }
 
-    // sendPostRequest
-    console.log('Form is valid!');
+    const formData = {
+        name: inputs[0].value,
+        phone: inputs[1].value
+    }
+
+    sendPostRequest(formData);
 }
 
 function main() {

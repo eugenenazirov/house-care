@@ -602,6 +602,13 @@
   }
 }
 
+.thanks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .form__agreement {
   display: flex;
   align-items: flex-start;
@@ -719,11 +726,12 @@
 @import "popup";
 
 .invalid-input {
-  border-color: $error-color;
+  border-color: $error-color !important;
 }
 
 .validation-label {
   color: $error-color;
+  font-size: 14px;
   display: flex;
   justify-content: center;
   margin: 5px 0 5px 0;

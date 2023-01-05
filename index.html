@@ -137,13 +137,13 @@
                     хозяйственного мужика!</p>
                 <div class="project__circles">
                     <div class="circles__circle">
-                        <div class="circle__text">145 м2</div>
+                        <div class="circle__text">220 м2</div>
                     </div>
                     <div class="circles__circle">
-                        <div class="circle__text">3 спальни</div>
+                        <div class="circle__text">2 спальни</div>
                     </div>
                     <div class="circles__circle">
-                        <div class="circle__text">2 санузла</div>
+                        <div class="circle__text">2 гаража</div>
                     </div>
                 </div>
                 <div class="project__buttons">
@@ -167,13 +167,13 @@
                     приглашать хоббитов в гости.</p>
                 <div class="project__circles">
                     <div class="circles__circle">
-                        <div class="circle__text">145 м2</div>
+                        <div class="circle__text">130 м2</div>
                     </div>
                     <div class="circles__circle">
-                        <div class="circle__text">3 спальни</div>
+                        <div class="circle__text">1 спальня</div>
                     </div>
                     <div class="circles__circle">
-                        <div class="circle__text">2 санузла</div>
+                        <div class="circle__text">1 санузел</div>
                     </div>
                 </div>
                 <div class="project__buttons">
@@ -194,13 +194,13 @@
                 <p class="project__description">Вы лакшери-пацан и хотите жить в роскоши? Насмотрелись фильмов про голливудскую жизнь? А может быть посмотрели мультфильм про Коня БоДжека? В любом случае дом с личным бассейном точно положительно скажется на ваших понтах и репутации. Главное, не забывайте вовремя чистить бассейн.</p>
                 <div class="project__circles">
                     <div class="circles__circle">
-                        <div class="circle__text">145 м2</div>
+                        <div class="circle__text">190 м2</div>
                     </div>
                     <div class="circles__circle">
                         <div class="circle__text">3 спальни</div>
                     </div>
                     <div class="circles__circle">
-                        <div class="circle__text">2 санузла</div>
+                        <div class="circle__text">3 санузла</div>
                     </div>
                 </div>
                 <div class="project__buttons">
@@ -554,13 +554,18 @@
                 <label class="validation-label closed" for="phoneInput">Необходимо заполнить телефон</label>
                 <button type="button" class="btn form__btn btn-gradient">Нужна консультация</button>
                 <div class="form__agreement">
-                    <input type="checkbox" class="checkbox form__checkbox" id="formCheckbox" required>
+                    <input type="checkbox" name="agreement" class="checkbox form__checkbox" id="formCheckbox" required>
                     <label class="checkbox-label" for="formCheckbox">Нажимая на кнопку,
                         я даю согласие на обработку персональных данных и соглашаюсь с
                         <span class="underline">политикой конфиденциальности</span>
                     </label>
                 </div>
             </form>
+        </div>
+        <div class="thanks closed">
+            <h2 class="title section-title consultation__title">
+                Спасибо! Мы свяжемся с вами в ближайшее время
+            </h2>
         </div>
     </div>
 </section>
@@ -631,25 +636,35 @@
         <button id="closeBtn" type="button" class="close-btn">
             <img class="close-btn-img" src="public/images/cancel.png" alt="Иконка закрыть">
         </button>
-        <p class="popup__description">
-            Пожалуйста, оставьте свои данные, чтобы мы могли связаться с вами и уточнить детали предстоящей экскурсии
-        </p>
-        <form action="" class="popup__form form consultation__form-form">
-            <label class="form__label" for="nameInputTour">Ваше имя</label>
-            <input name="username" type="text" class="form__input" id="nameInputTour" placeholder="Ваше имя">
-            <label class="validation-label closed" for="nameInput">Необходимо заполнить имя</label>
-            <label class="form__label" for="phoneInputTour">Ваш телефон</label>
-            <input type="tel" class="phone form__input" id="phoneInputTour" name="phone" placeholder="Ваш телефон">
-            <label class="validation-label closed" for="phoneInput">Необходимо заполнить телефон</label>
-            <button type="button" class="btn form__btn btn-gradient">Записаться</button>
-            <div class="form__agreement">
-                <input type="checkbox" name="agreement" class="checkbox form__checkbox" id="formCheckboxTour" required>
-                <label class="checkbox-label" for="formCheckbox">Нажимая на кнопку,
-                    я даю согласие на обработку персональных данных и соглашаюсь с
-                    <span class="underline">политикой конфиденциальности</span>
-                </label>
-            </div>
-        </form>
+        <div class="consultation__form">
+            <p class="popup__description">
+                Пожалуйста, оставьте свои данные, чтобы мы могли связаться с вами и уточнить детали предстоящей экскурсии
+            </p>
+            <form action="" class="popup__form form consultation__form-form">
+                <label class="form__label" for="nameInputTour">Ваше имя</label>
+                <input name="username" type="text" class="form__input" id="nameInputTour" placeholder="Ваше имя">
+                <label class="validation-label closed" for="nameInput">Необходимо заполнить имя</label>
+                <label class="form__label" for="phoneInputTour">Ваш телефон</label>
+                <input type="tel" class="phone form__input" id="phoneInputTour" name="phone" placeholder="Ваш телефон">
+                <label class="validation-label closed" for="phoneInput">Необходимо заполнить телефон</label>
+                <button type="button" class="btn form__btn btn-gradient">Записаться</button>
+                <div class="form__agreement">
+                    <input type="checkbox" name="agreement" class="checkbox form__checkbox" id="formCheckboxTour" required>
+                    <label class="checkbox-label" for="formCheckbox">Нажимая на кнопку,
+                        я даю согласие на обработку персональных данных и соглашаюсь с
+                        <span class="underline">политикой конфиденциальности</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="thanks closed">
+            <p class="popup__description">
+                Спасибо!
+            </p>
+            <p class="popup__description">
+                Мы свяжемся с вами в ближайшее время
+            </p>
+        </div>
     </div>
 </div>
 
