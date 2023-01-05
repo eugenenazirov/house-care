@@ -1,6 +1,8 @@
 const popup = $('.popup');
 const projects = $('.projects__project');
-const seeMore = $('.see-more');
+const seeMore = $('.see-more')
+const seeMoreText = $('.see-more__text')
+const seeMoreArrow = $('.see-more__arrow');
 
 
 const orderProjectBlocks = () => {
@@ -13,8 +15,8 @@ const orderProjectBlocks = () => {
 
 const hideThreeProjects = () => {
     projects.slice(-3).hide(1000);
-    $('.see-more__text').text('Показать еще три проекта');
-    $('.see-more__arrow').css({
+    seeMoreText.text('Показать еще три проекта');
+    seeMoreArrow.css({
         transform: 'rotate(180deg)'
     });
     seeMore.off().click(showThreeProjects);
@@ -22,8 +24,8 @@ const hideThreeProjects = () => {
 
 const showThreeProjects = () => {
     projects.slice(-3).show(1000);
-    $('.see-more__text').text('Скрыть последние три проекта');
-    $('.see-more__arrow').css({
+    seeMoreText.text('Скрыть последние три проекта');
+    seeMoreArrow.css({
         transform: 'rotate(180deg)'
     });
     seeMore.off().click(hideThreeProjects);
@@ -34,6 +36,11 @@ const scrollToProjects = () => {
     projects.scrollIntoView({
         behavior: 'smooth'
     });
+}
+
+const scrollToConsultation = () => {
+    const getConsultation = $('#consultationBlock');
+    getConsultation.scroll();
 }
 
 const openPopup = () => {
