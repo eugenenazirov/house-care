@@ -3,6 +3,7 @@ const projects = $('.projects__project');
 const seeMore = $('.see-more')
 const seeMoreText = $('.see-more__text')
 const seeMoreArrow = $('.see-more__arrow');
+const form = $('#form');
 
 
 const orderProjectBlocks = () => {
@@ -39,8 +40,10 @@ const scrollToProjects = () => {
 }
 
 const scrollToConsultation = () => {
-    const getConsultation = $('#consultationBlock');
-    getConsultation.scroll();
+    const consultationBlock = document.getElementById('consultationBlock');
+    consultationBlock.scrollIntoView({
+        behavior: 'smooth'
+    });
 }
 
 const openPopup = () => {
@@ -53,6 +56,38 @@ const hidePopup = () => {
     });
 }
 
+const validateForm = (e) => {
+    e.preventDefault();
+    const formClass = e.target.parentElement.classList[0];
+    const inputs = $(`.${formClass} .form__input`);
+    const checkbox = $(`.${formClass} .form__checkbox`);
+    let errors = [];
+
+    inputs.each(function () {
+        let trimmedValue = this.value.trim();
+        if (!trimmedValue) {
+            let elem = $(this);
+            elem.addClass('invalid-input');
+            elem.next().removeClass('closed');
+            errors.push(`Input ${this.name} has invalid value.`);
+        }
+    });
+
+    if (!checkbox[0].checked) {
+        errors.push(`Checkbox ${checkbox[0].name} isn't checked!`)
+    }
+
+    if (errors.length !== 0) {
+        errors.forEach((e) => {
+            console.log(e);
+        })
+        return false;
+    }
+
+    // sendPostRequest
+    console.log('Form is valid!');
+}
+
 function main() {
     projects.slice(-3).hide();
     orderProjectBlocks();
@@ -60,16 +95,28 @@ function main() {
     $('#scrollDown').click(scrollToProjects);
     $('#closeBtn').click(hidePopup);
     seeMore.click(showThreeProjects);
+    $('.to-consultation').each(function () {
+        $(this).click(scrollToConsultation);
+    });
+    $('.form__btn').click(validateForm);
+
     new Glide('.glide', {
         autoplay: 3000,
         hoverpause: true,
     }).mount();
+
     $('.project__image').magnificPopup({
         delegate: 'a',
         gallery: {
             enabled: true
         },
         type: 'image'
+    });
+
+    $('.form__input.phone').each(function () {
+        new IMask(this, {
+            mask: "+{7} (000) 000-00-00"
+        });
     });
 }
 

@@ -17,6 +17,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.6.0",
     "gulp-rename": "^2.0.0",
+    "imask": "^6.4.3",
     "jquery": "^3.6.1",
     "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1"

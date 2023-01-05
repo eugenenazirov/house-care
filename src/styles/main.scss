@@ -95,6 +95,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
 
     .order-a-call__icon {
       .order-a-call__icon-img {
@@ -618,7 +619,7 @@
 }
 
 .form__input {
-  margin-bottom: 20px;
+  margin-top: 20px;
 
   display: block;
   width: 100%;
@@ -640,7 +641,7 @@
 }
 
 .form__btn {
-  margin-bottom: 30px;
+  margin: 20px 0 30px;
 
   display: block;
   width: 100%;
@@ -716,3 +717,18 @@
 }
 
 @import "popup";
+
+.invalid-input {
+  border-color: $error-color;
+}
+
+.validation-label {
+  color: $error-color;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0 5px 0;
+}
+
+.closed {
+  display: none;
+}

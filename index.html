@@ -20,7 +20,7 @@
             </a>
             <div class="phone">
                 <a href="tel:+38096736728" class="phone__number">+380 (96) 73-67-281</a>
-                <a href="#" class="phone__order-a-call">
+                <a class="phone__order-a-call to-consultation">
                     <div class="order-a-call__icon">
                         <img src="public/images/order-a-call-icon.png" alt="Закажите звонок иконка"
                              class="order-a-call__icon-img">
@@ -44,7 +44,7 @@
                 <h1 class="title hero__title">Строительство домов
                     и коттеджей под ключ</h1>
                 <p class="hero__description">Сможете переехать в готовый дом уже через 3 месяца</p>
-                <button class="btn hero__btn btn-gradient">Узнать подробнее</button>
+                <button class="btn hero__btn btn-gradient to-consultation">Узнать подробнее</button>
             </div>
             <div class="social">
                 <a href="#" class="social__icon">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="project__buttons">
-                    <button class="btn project__btn btn-gradient">Получить консультацию</button>
+                    <button class="btn project__btn btn-gradient to-consultation">Получить консультацию</button>
                     <button class="btn project__btn btn-transparent">Скачать PDF-план проекта (2,5 мб)</button>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="project__buttons">
-                    <button class="btn project__btn btn-gradient">Получить консультацию</button>
+                    <button class="btn project__btn btn-gradient to-consultation">Получить консультацию</button>
                     <button class="btn project__btn btn-transparent">Скачать PDF-план проекта (2,5 мб)</button>
                 </div>
             </div>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <div class="project__buttons">
-                    <button class="btn project__btn btn-gradient">Получить консультацию</button>
+                    <button class="btn project__btn btn-gradient to-consultation">Получить консультацию</button>
                     <button class="btn project__btn btn-transparent">Скачать PDF-план проекта (2,5 мб)</button>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <div class="project__buttons">
-                    <button class="btn project__btn btn-gradient">Получить консультацию</button>
+                    <button class="btn project__btn btn-gradient to-consultation">Получить консультацию</button>
                     <button class="btn project__btn btn-transparent">Скачать PDF-план проекта (2,5 мб)</button>
                 </div>
             </div>
@@ -204,7 +204,7 @@
                     </div>
                 </div>
                 <div class="project__buttons">
-                    <button class="btn project__btn btn-gradient">Получить консультацию</button>
+                    <button class="btn project__btn btn-gradient to-consultation">Получить консультацию</button>
                     <button class="btn project__btn btn-transparent">Скачать PDF-план проекта (2,5 мб)</button>
                 </div>
             </div>
@@ -545,11 +545,13 @@
             <h2 class="title section-title consultation__title">
                 Получите индивидуальную консультацию
             </h2>
-            <form action="" class="consultation__form-form">
+            <form action="" id="form" class="in-page-form consultation__form-form">
                 <label class="form__label" for="nameInput">Ваше имя</label>
-                <input type="text" class="form__input" id="nameInput" placeholder="Ваше имя">
+                <input type="text" class="form__input" id="nameInput" name="username" placeholder="Ваше имя">
+                <label class="validation-label closed" for="nameInput">Необходимо заполнить имя</label>
                 <label class="form__label" for="phoneInput">Ваш телефон</label>
-                <input type="text" class="form__input" id="phoneInput" placeholder="Ваш телефон">
+                <input type="tel" class="phone form__input" id="phoneInput" name="phone" placeholder="Ваш телефон">
+                <label class="validation-label closed" for="phoneInput">Необходимо заполнить телефон</label>
                 <button type="button" class="btn form__btn btn-gradient">Нужна консультация</button>
                 <div class="form__agreement">
                     <input type="checkbox" class="checkbox form__checkbox" id="formCheckbox" required>
@@ -611,13 +613,13 @@
         </div>
         <div class="phone footer__phone">
             <a href="tel:+38096736728" class="phone__number">+380 (96) 73-67-281</a>
-            <a href="#" class="phone__order-a-call">
+            <a class="phone__order-a-call">
                 <div class="order-a-call__icon">
                     <img src="public/images/order-a-call-icon.png" alt="Закажите звонок иконка"
                          class="order-a-call__icon-img">
                 </div>
                 <div class="order-a-call__text">
-                    <span class="text__content">Заказать звонок</span>
+                    <span class="text__content to-consultation">Заказать звонок</span>
                 </div>
             </a>
         </div>
@@ -632,14 +634,16 @@
         <p class="popup__description">
             Пожалуйста, оставьте свои данные, чтобы мы могли связаться с вами и уточнить детали предстоящей экскурсии
         </p>
-        <form action="" class="form consultation__form-form popup__form">
+        <form action="" class="popup__form form consultation__form-form">
             <label class="form__label" for="nameInputTour">Ваше имя</label>
-            <input type="text" class="form__input" id="nameInputTour" placeholder="Ваше имя">
+            <input name="username" type="text" class="form__input" id="nameInputTour" placeholder="Ваше имя">
+            <label class="validation-label closed" for="nameInput">Необходимо заполнить имя</label>
             <label class="form__label" for="phoneInputTour">Ваш телефон</label>
-            <input type="text" class="form__input" id="phoneInputTour" placeholder="Ваш телефон">
+            <input type="tel" class="phone form__input" id="phoneInputTour" name="phone" placeholder="Ваш телефон">
+            <label class="validation-label closed" for="phoneInput">Необходимо заполнить телефон</label>
             <button type="button" class="btn form__btn btn-gradient">Записаться</button>
             <div class="form__agreement">
-                <input type="checkbox" class="checkbox form__checkbox" id="formCheckboxTour" required>
+                <input type="checkbox" name="agreement" class="checkbox form__checkbox" id="formCheckboxTour" required>
                 <label class="checkbox-label" for="formCheckbox">Нажимая на кнопку,
                     я даю согласие на обработку персональных данных и соглашаюсь с
                     <span class="underline">политикой конфиденциальности</span>
@@ -652,6 +656,7 @@
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+<script src="node_modules/imask/dist/imask.min.js"></script>
 <script type="module" src="public/main.min.js"></script>
 </body>
 </html>

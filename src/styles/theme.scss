@@ -27,6 +27,8 @@ $btn-text: rgb(37, 37, 45);
 $bg-blue: #25252d;
 $steps-number-color: #393943;
 $card-color: #313139;
+$error-color: #c92f44;
+
 
 @mixin background-gradient($gradient, $main-color) {
   background: $main-color;
