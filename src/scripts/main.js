@@ -3,6 +3,7 @@ const projects = $('.projects__project');
 const seeMore = $('.see-more')
 const seeMoreText = $('.see-more__text')
 const seeMoreArrow = $('.see-more__arrow');
+const popupMenu = $('#popupMenu');
 
 
 const orderProjectBlocks = () => {
@@ -45,7 +46,7 @@ const scrollToConsultation = () => {
     });
 }
 
-const openPopup = () => {
+const showPopup = () => {
     popup.removeClass('closed').hide().fadeIn();
 }
 
@@ -53,6 +54,21 @@ const hidePopup = () => {
     popup.fadeOut(400, () => {
         popup.addClass('closed');
     });
+}
+
+const showMenu = () => {
+    popupMenu.show(300);
+    [
+        $('#menuClose'),
+        $('.menu__item'),
+        $('.place-to-hide-menu'),
+    ].forEach((obj) => {
+        obj.click(hideMenu);
+    })
+}
+
+const hideMenu = () => {
+    popupMenu.hide(300);
 }
 
 const sendPostRequest = (formData) => {
@@ -124,9 +140,10 @@ const validateForm = (e) => {
 function main() {
     projects.slice(-3).hide();
     orderProjectBlocks();
-    $('#tourBtn').click(openPopup);
+    $('#tourBtn').click(showPopup);
     $('#scrollDown').click(scrollToProjects);
     $('#closeBtn').click(hidePopup);
+    $('#burger').click(showMenu);
     seeMore.click(showThreeProjects);
     $('.to-consultation').each(function () {
         $(this).click(scrollToConsultation);

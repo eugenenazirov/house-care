@@ -35,6 +35,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .close-btn-img {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     .form__checkbox {
