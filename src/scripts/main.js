@@ -137,6 +137,14 @@ const validateForm = (e) => {
     sendPostRequest(formData);
 }
 
+const showRelatedCard = (e) => {
+    let target = $(e.target);
+    $('.mobile-circle-cursor').removeClass('active');
+    target.addClass('active');
+    $('.schema__info-block').hide().removeClass('active');
+    target.next().addClass('active').show();
+}
+
 const adaptiveCheck = (maxWidth) => {
     if ($(window).width() <= maxWidth) {
         projects.each(function () {
@@ -146,7 +154,9 @@ const adaptiveCheck = (maxWidth) => {
 
             projectInfoContent.html(projectInfoContent.html() + projectImagesContent.prop('outerHTML'));
             projectImagesContent.remove();
-        })
+        });
+
+        $('.mobile-circle-cursor').click(showRelatedCard);
     }
 }
 

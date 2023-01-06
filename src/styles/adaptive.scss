@@ -11,17 +11,16 @@
 
   .btn-gradient {
     font-size: 16px;
-    padding: 21px 14px;
+    padding: 18px 14px;
   }
 
   .btn-transparent {
     font-size: 15px;
-    padding: 21px 14px;
+    padding: 18px 14px;
   }
 
   .section-title {
     font-size: 30px;
-    text-align: left;
   }
 
   .main {
@@ -114,10 +113,149 @@
       .see-more__text {
         font-size: 15px;
       }
+
       .see-more__arrow {
         width: 12px;
         height: 7px;
       }
     }
+  }
+
+  .tech {
+    padding: 45px 0 0;
+
+    .tech__title {
+      margin-bottom: 42px;
+    }
+
+    .house-schema {
+      padding-bottom: 40px;
+
+      .house-schema__image-img {
+        max-width: 290px;
+      }
+
+      .schema__info-block {
+        display: none;
+        position: static;
+        margin-top: 15px;
+        padding: 20px 15px;
+        background-color: $card-color;
+        max-width: 100%;
+
+        &.active {
+          display: block;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          box-shadow: inset 3em 3em $card-color;
+          clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+        }
+
+        .info-block__title {
+          font-size: 16px;
+        }
+
+        .info-block__description {
+          font-size: 14px;
+        }
+      }
+
+      .info-block__cursor {
+        display: none;
+      }
+
+      .mobile-circle-cursor {
+        display: block;
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        background-image: url("../../public/images/cursors/mobile-cursor.png");
+        background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
+
+        &.active {
+          background-image: url("../../public/images/cursors/mobile-cursor-active.png");
+        }
+      }
+
+      .mobile-card-cursor {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        bottom: 90px;
+        left: 0;
+      }
+
+      #mobileCursor1 {
+        top: 40px;
+        left: 0;
+      }
+
+      #mobileCursor2 {
+        top: 130px;
+        left: 40px;
+      }
+
+      #mobileCursor3 {
+        top: 205px;
+        left: 90px;
+      }
+
+      #mobileCursor4 {
+        top: 130px;
+        right: 50px;
+      }
+
+      #mobileCursor5 {
+        top: 50px;
+        right: 20px;
+      }
+
+      #infoBlock1 {
+        &::before {
+          bottom: 167px;
+          left: 25px;
+        }
+      }
+
+      #infoBlock2 {
+        &::before {
+          bottom: 185px;
+          left: 63px;
+        }
+      }
+
+      #infoBlock3 {
+        &::before {
+          bottom: 203px;
+          left: 115px;
+        }
+      }
+
+      #infoBlock4 {
+        &::before {
+          bottom: 167px;
+          right: 75px;
+        }
+      }
+
+      #infoBlock5 {
+        &::before {
+          bottom: 149px;
+          right: 45px;
+        }
+      }
+    }
+  }
+
+  .steps {
+    padding: 40px 0;
   }
 }
