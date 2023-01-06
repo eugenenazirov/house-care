@@ -468,6 +468,7 @@
           }
 
           .item__text-key, .item__text-value {
+            display: inline;
             font-size: 16px;
           }
 
@@ -644,7 +645,15 @@
   padding: 21px;
   outline: none;
 
+  &::-webkit-input-placeholder {
+    color: $white-color;
+  }
+
   &::placeholder {
+    color: $white-color;
+  }
+
+  &:-ms-input-placeholder {
     color: $white-color;
   }
 }

@@ -90,8 +90,12 @@ a {
   color: $white-color;
 }
 
-.underline {
+.text-underline {
   text-decoration: underline;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 input[type="checkbox"] {
