@@ -4,7 +4,6 @@ const seeMore = $('.see-more')
 const seeMoreText = $('.see-more__text')
 const seeMoreArrow = $('.see-more__arrow');
 const popupMenu = $('#popupMenu');
-const projectInfoContent = $('.project__info').children();
 
 
 const orderProjectBlocks = () => {

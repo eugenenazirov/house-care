@@ -26,6 +26,11 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  background-color: $bg-blue;
+
+  .close-btn {
+    cursor: pointer;
+  }
 }
 
 .menu__title {
