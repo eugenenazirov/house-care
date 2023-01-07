@@ -165,7 +165,7 @@ const showMobileCards = (maxWidth) => {
 }
 
 function main() {
-    moveProjectImages(530);
+    moveProjectImages(580);
     showMobileCards(854);
 
     projects.slice(-3).hide();

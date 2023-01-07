@@ -597,6 +597,7 @@
       }
 
       .hero__info {
+        grid-column: unset;
         .hero__title {
           font-size: 40px;
         }
@@ -923,7 +924,7 @@
   .popup-menu-bg {
     .menu {
       grid-template-columns: 1fr 1fr;
-      max-width: 960px;
+      max-width: 890px;
       overflow-y: scroll;
       overflow-x: visible;
 
@@ -995,6 +996,13 @@
           }
         }
       }
+    }
+  }
+
+  .popup-menu-bg {
+    .menu {
+      grid-template-columns: 1fr 2fr;
+      max-width: 800px;
     }
   }
 }
@@ -1295,6 +1303,7 @@
         order: 2;
         grid-template-rows: 360px 80px;
         grid-gap: 12px;
+        max-width: 600px;
       }
 
       .project__info {
@@ -1632,7 +1641,7 @@
   .popup-menu-bg {
     .menu {
       grid-template-columns: 1fr 1fr;
-      max-width: 600px;
+      max-width: 700px;
       overflow-y: scroll;
       overflow-x: visible;
 
@@ -1660,6 +1669,58 @@
 }
 
 @media screen and (max-width: 690px) {
+  .projects {
+    .projects__project {
+      .project__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+
+        .project__title {
+          order: 1;
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+
+        .project__description {
+          order: 3;
+          margin: 10px 0 30px;
+          font-size: 16px;
+        }
+
+        .project__circles {
+          order: 4;
+          margin-bottom: 25px;
+
+          .circles__circle {
+            width: 85px;
+            height: 85px;
+            padding: 8px;
+
+            .circle__text {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .project__buttons {
+          order: 5;
+        }
+      }
+    }
+
+    .see-more {
+      .see-more__text {
+        font-size: 15px;
+      }
+
+      .see-more__arrow {
+        width: 12px;
+        height: 7px;
+      }
+    }
+  }
+
   .tech {
     .house-schema {
       #mobileCursor1 {
@@ -1725,9 +1786,68 @@
       }
     }
   }
+
+  .popup-menu-bg {
+    .menu {
+      max-width: 600px;
+    }
+  }
 }
 
 @media screen and (max-width: 620px) {
+  .projects {
+    padding: 40px 0;
+
+    .projects__project {
+      padding: 40px 0;
+      flex-flow: wrap;
+      flex-direction: column;
+
+      .project__image {
+        order: 2;
+        grid-template-rows: 185px 70px;
+        grid-gap: 12px;
+      }
+
+      .project__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+
+        .project__circles {
+          justify-content: space-around;
+          order: 4;
+
+          .circles__circle {
+            width: 85px;
+            height: 85px;
+            padding: 8px;
+
+            .circle__text {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .project__buttons {
+          order: 5;
+          align-self: center;
+        }
+      }
+    }
+
+    .see-more {
+      .see-more__text {
+        font-size: 15px;
+      }
+
+      .see-more__arrow {
+        width: 12px;
+        height: 7px;
+      }
+    }
+  }
+
   .tech {
     .house-schema {
       #mobileCursor1 {
@@ -1791,6 +1911,12 @@
           right: 235px;
         }
       }
+    }
+  }
+
+  .popup-menu-bg {
+    .menu {
+      max-width: 500px;
     }
   }
 }
@@ -1861,6 +1987,73 @@
       }
     }
   }
+
+  .projects {
+    padding: 40px 0;
+
+    .projects__project {
+      padding: 40px 0;
+      flex-flow: wrap;
+      flex-direction: column;
+
+      .project__image {
+        order: 2;
+        grid-template-rows: 185px 70px;
+        grid-gap: 12px;
+      }
+
+      .project__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+
+        .project__circles {
+          justify-content: space-around;
+          order: 4;
+
+          .circles__circle {
+            width: 85px;
+            height: 85px;
+            padding: 8px;
+
+            .circle__text {
+              font-size: 15px;
+            }
+          }
+        }
+
+        .project__buttons {
+          order: 5;
+          align-self: center;
+        }
+      }
+    }
+
+    .see-more {
+      .see-more__text {
+        font-size: 15px;
+      }
+
+      .see-more__arrow {
+        width: 12px;
+        height: 7px;
+      }
+    }
+  }
+
+  .popup-menu-bg {
+    .menu {
+      max-width: 520px;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .popup-menu-bg {
+    .menu {
+      max-width: 500px;
+    }
+  }
 }
 
 @media screen and (max-width: 468px) {
@@ -1927,6 +2120,12 @@
           right: 235px;
         }
       }
+    }
+  }
+
+  .popup-menu-bg {
+    .menu {
+      max-width: 400px;
     }
   }
 }
@@ -2551,8 +2750,10 @@
     .house-schema {
       padding-bottom: 40px;
 
-      .house-schema__image-img {
-        max-width: 290px;
+      .house-schema__image {
+        .house-schema__image-img {
+          max-width: 290px;
+        }
       }
 
       #mobileCursor1 {
@@ -2791,8 +2992,8 @@
 
   .popup-menu-bg {
     .menu {
-      grid-template-columns: 2fr 1fr;
-      max-width: 320px;
+      grid-template-columns: 3fr 1fr;
+      max-width: 280px;
       overflow-y: scroll;
       overflow-x: visible;
 
