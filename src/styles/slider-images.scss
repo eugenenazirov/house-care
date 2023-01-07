@@ -61,12 +61,12 @@
   }
 
   .item__image-center {
-    background-image: url("../../public/images/slider/12.jpg");
+    background-image: url("../public/images/slider/12.jpg");
     @include background-props;
   }
 
   .item__image-right {
-    background-image: url("../../public/images/slider/14.jpg");
+    background-image: url("../public/images/slider/14.jpg");
     @include background-props;
   }
 }
@@ -74,17 +74,17 @@
 
 #slide5 {
   .item__image-left {
-    background-image: url("../../public/images/slider/15.jpg");
+    background-image: url("../public/images/slider/15.jpg");
     @include background-props;
   }
 
   .item__image-center {
-    background-image: url("../../public/images/slider/17.jpg");
+    background-image: url("../public/images/slider/17.jpg");
     @include background-props;
   }
 
   .item__image-right {
-    background-image: url("../../public/images/slider/16.jpg");
+    background-image: url("../public/images/slider/16.jpg");
     @include background-props;
   }
 }
