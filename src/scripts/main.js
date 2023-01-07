@@ -145,7 +145,7 @@ const showRelatedCard = (e) => {
     target.next().addClass('active').show();
 }
 
-const adaptiveCheck = (maxWidth) => {
+const moveProjectImages = (maxWidth) => {
     if ($(window).width() <= maxWidth) {
         projects.each(function () {
             let elem = $(this);
@@ -155,13 +155,18 @@ const adaptiveCheck = (maxWidth) => {
             projectInfoContent.html(projectInfoContent.html() + projectImagesContent.prop('outerHTML'));
             projectImagesContent.remove();
         });
+    }
+}
 
+const showMobileCards = (maxWidth) => {
+    if ($(window).width() <= maxWidth) {
         $('.mobile-circle-cursor').click(showRelatedCard);
     }
 }
 
 function main() {
-    adaptiveCheck(320);
+    moveProjectImages(530);
+    showMobileCards(854);
 
     projects.slice(-3).hide();
     orderProjectBlocks();
