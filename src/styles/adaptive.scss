@@ -1914,6 +1914,12 @@
     }
   }
 
+  .consultation {
+    .consultation__image {
+      display: none;
+    }
+  }
+
   .popup-menu-bg {
     .menu {
       max-width: 500px;
@@ -2041,6 +2047,12 @@
     }
   }
 
+  .popup {
+    .popup__content {
+      overflow-y: scroll;
+      padding: 50px 30px;
+    }
+  }
   .popup-menu-bg {
     .menu {
       max-width: 520px;
