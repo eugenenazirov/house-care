@@ -1,0 +1,42 @@
+name: server
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  update-files:
+    timeout-minutes: 2
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Update Files
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd ~/house-care
+            git reset --hard origin/master
+            git pull
+  build-client:
+    if: "contains(github.event.commits[0].message, '[need build client]')"
+    timeout-minutes: 2
+    needs: [update-files]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Client
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd ~/house-care
+            npm install
+            pm2 restart house-care
