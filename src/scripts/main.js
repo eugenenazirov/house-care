@@ -57,7 +57,10 @@ const hidePopup = () => {
 }
 
 const showMenu = () => {
-    $('body').addClass('overflow-hidden');
+    if ($(window).width() <= 768) {
+        $('body').addClass('overflow-hidden');
+    }
+
     popupMenu.show(300);
     [
         $('#menuClose'),

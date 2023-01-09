@@ -2007,21 +2007,6 @@
         flex-direction: column;
         max-width: 100%;
 
-        .project__circles {
-          justify-content: space-around;
-          order: 4;
-
-          .circles__circle {
-            width: 85px;
-            height: 85px;
-            padding: 8px;
-
-            .circle__text {
-              font-size: 15px;
-            }
-          }
-        }
-
         .project__buttons {
           order: 5;
           align-self: center;
@@ -2210,20 +2195,6 @@
           order: 3;
           margin: 30px 0 40px;
           font-size: 16px;
-        }
-
-        .project__circles {
-          order: 4;
-
-          .circles__circle {
-            width: 85px;
-            height: 85px;
-            padding: 8px;
-
-            .circle__text {
-              font-size: 15px;
-            }
-          }
         }
 
         .project__buttons {
@@ -2715,6 +2686,7 @@
         }
 
         .project__circles {
+          justify-content: space-between;
           order: 4;
 
           .circles__circle {

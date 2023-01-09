@@ -125,9 +125,14 @@
   gap: 30px;
   transform: rotate(-90deg) translateX(-150px) translateY(45px);
   cursor: pointer;
+  transition: transform .3s ease-out;
 
   .scroll-down__text {
     color: $scroll-down-color
+  }
+
+  &:hover {
+    transform: rotate(-90deg) translateX(-160px) translateY(45px);
   }
 }
 
