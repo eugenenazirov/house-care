@@ -23,7 +23,6 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-cssmin": "^0.2.0",
     "gulp-minify": "^3.1.0",
