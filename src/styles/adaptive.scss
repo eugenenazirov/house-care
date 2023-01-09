@@ -224,12 +224,8 @@
     .menu {
       grid-template-columns: 1fr 1fr;
       max-width: 960px;
-      overflow-y: scroll;
-      overflow-x: visible;
 
       .menu__bar {
-        overflow: visible;
-
         .menu__title {
           font-size: 35px;
         }
@@ -415,12 +411,8 @@
     .menu {
       grid-template-columns: 1fr 1fr;
       max-width: 960px;
-      overflow-y: scroll;
-      overflow-x: visible;
 
       .menu__bar {
-        overflow: visible;
-
         .menu__title {
           font-size: 35px;
         }
@@ -740,54 +732,6 @@
     }
   }
 
-  .consultation {
-    padding: 50px 0;
-
-    .container {
-      gap: 40px;
-    }
-
-    .consultation__image {
-      .consultation__image-img {
-        max-width: 500px;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .consultation__form {
-      .consultation__form-form {
-        .form__input {
-          font-size: 18px;
-        }
-      }
-    }
-  }
-
-  .map {
-    padding: 100px 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-
-    .location-mark {
-      display: none;
-    }
-
-    .map__content {
-      .map__title {
-        font-size: 30px;
-      }
-
-      .map__description {
-        font-size: 18px;
-      }
-
-      .map__btn {
-        width: 100%;
-      }
-    }
-  }
-
   .footer {
     padding: 50px 0 80px;
 
@@ -815,11 +759,10 @@
     .menu {
       grid-template-columns: 1fr 1fr;
       max-width: 960px;
-      overflow-y: scroll;
-      overflow-x: visible;
+      overflow: hidden;
 
       .menu__bar {
-        overflow: visible;
+        overflow-x: scroll;
 
         .menu__title {
           font-size: 35px;
@@ -925,11 +868,9 @@
     .menu {
       grid-template-columns: 1fr 1fr;
       max-width: 890px;
-      overflow-y: scroll;
-      overflow-x: visible;
 
       .menu__bar {
-        overflow: visible;
+        overflow-x: scroll;
 
         .menu__title {
           font-size: 35px;
@@ -1642,12 +1583,8 @@
     .menu {
       grid-template-columns: 1fr 1fr;
       max-width: 700px;
-      overflow-y: scroll;
-      overflow-x: visible;
 
       .menu__bar {
-        overflow: visible;
-
         .menu__title {
           font-size: 35px;
         }
@@ -2573,11 +2510,8 @@
     .menu {
       grid-template-columns: 2fr 1fr;
       max-width: 350px;
-      overflow-y: scroll;
-      overflow-x: visible;
 
       .menu__bar {
-        overflow: visible;
 
         .menu__title {
           font-size: 35px;
@@ -2966,11 +2900,8 @@
     .menu {
       grid-template-columns: 3fr 1fr;
       max-width: 280px;
-      overflow-y: scroll;
-      overflow-x: visible;
 
       .menu__bar {
-        overflow: visible;
 
         .menu__title {
           font-size: 35px;
