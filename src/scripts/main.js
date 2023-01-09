@@ -57,6 +57,7 @@ const hidePopup = () => {
 }
 
 const showMenu = () => {
+    $('body').addClass('overflow-hidden');
     popupMenu.show(300);
     [
         $('#menuClose'),
@@ -64,10 +65,11 @@ const showMenu = () => {
         $('.place-to-hide-menu'),
     ].forEach((obj) => {
         obj.click(hideMenu);
-    })
+    });
 }
 
 const hideMenu = () => {
+    $('body').removeClass('overflow-hidden');
     popupMenu.hide(300);
 }
 
@@ -158,15 +160,13 @@ const moveProjectImages = (maxWidth) => {
     }
 }
 
-const showMobileCards = (maxWidth) => {
-    if ($(window).width() <= maxWidth) {
-        $('.mobile-circle-cursor').click(showRelatedCard);
-    }
+const showMobileCards = () => {
+    $('.mobile-circle-cursor').click(showRelatedCard);
 }
 
 function main() {
     moveProjectImages(580);
-    showMobileCards(854);
+    showMobileCards();
 
     projects.slice(-3).hide();
     orderProjectBlocks();
